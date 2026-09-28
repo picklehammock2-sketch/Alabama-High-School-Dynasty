@@ -59,11 +59,11 @@ td,th{padding:9px 10px}
 </style>
 </head>
 <body>
-<header><h1>Alabama High School Dynasty</h1><div class="muted">v1.4.8 • Alabama High School Dynasty • Mobile-ready browser build</div></header>
+<header><h1>Alabama High School Dynasty</h1><div class="muted">v1.4.26 • Alabama High School Dynasty • Mobile-ready browser build</div></header>
 <main id="app"></main>
 <script>
 const RECENT_CALIBRATION={
-  "Clay-Chalkville":90.5,"Fyffe":89.4,"Saraland":87.8,"Thompson":86.4,"Piedmont":81.1,"Handley":81.8,"Leroy":80.7,"Maplesville":77.9,"Reeltown":77.8,"Vigor":75.6,"T.R. Miller":74.4,"Thomasville":72.7,"Luverne":69.3,"Hoover":71.6,"Spanish Fort":70.1,"Theodore":73.7,"Gordo":82.9,"Guntersville":80.0,"Jackson":79.5,"Auburn":80.5,"Pike Road":79.8,"Muscle Shoals":78.9,"Hartselle":77.6,"Winfield":78.5,"Geraldine":74.7,"Elba":74.7,"Brantley":73.8,"Andalusia":72.0,"Deshler":67.6,"Russellville":69.2,"St. Pauls":69.2,"Clarke County":68.8,"Fort Payne":68.0,"Homewood":67.9,"Daphne":63.4,"Fairhope":63.4,"Opelika":64.0,"Cullman":54.3,"Bullock County":47.8,"R.C. Hatch":26.6,"Asbury":7.7,"Barbour County":8.3,"Sumter Central":8.2,"Talladega":12.3,"Talladega County Central":10.8,"Albertville":10.8,"Brindlee Mountain":9.4,"J.F. Shields":13.8,"Francis Marion":12.9,"Snook Christian":13.6,"Calhoun":16.7,"Monroe County":18.8,"Murphy":18.8,"Robertsdale":21.9,"D.A.R.":21.5,"Holt":23.4,"Hanceville":21.5,"Fruitdale":25.8,"Tuscaloosa County":26.2,"Sardis":24.6,"Chilton County":23.1,"Cherokee":22.7,"Daleville":15.4,"Elkmont":15.4,"Wilson":15.4,"Vina":12.7,"Crossville":11.1,"Wilcox Central":10.9,"Tarrant":11.3,"Columbia":3.1,"Ellwood Christian":2.3,"Breakthrough Charter":0.0};
+  "Clay-Chalkville":90.5,"Fyffe":89.4,"Saraland":87.8,"Thompson":86.4,"Piedmont":81.1,"Handley":81.8,"Leroy":80.7,"Maplesville":77.9,"Reeltown":77.8,"Vigor":75.6,"T.R. Miller":74.4,"Thomasville":72.7,"Luverne":69.3,"Hoover":71.6,"Spanish Fort":70.1,"Theodore":73.7,"Gordo":82.9,"Guntersville":80.0,"Jackson":79.5,"Auburn":80.5,"Pike Road":79.8,"Muscle Shoals":78.9,"Hartselle":77.6,"Winfield":78.5,"Geraldine":74.7,"Elba":74.7,"Brantley":73.8,"Andalusia":72.0,"Deshler":67.6,"Russellville":69.2,"St. Pauls":69.2,"Clarke County":68.8,"Fort Payne":68.0,"Homewood":67.9,"Daphne":63.4,"Fairhope":63.4,"Opelika":64.0,"Cullman":54.3,"Anniston":72.5,"Bullock County":47.8,"R.C. Hatch":26.6,"Asbury":7.7,"Barbour County":8.3,"Sumter Central":8.2,"Talladega":12.3,"Talladega County Central":10.8,"Albertville":10.8,"Brindlee Mountain":9.4,"J.F. Shields":13.8,"Francis Marion":12.9,"Snook Christian":13.6,"Calhoun":16.7,"Monroe County":18.8,"Murphy":18.8,"Robertsdale":21.9,"D.A.R.":21.5,"Holt":23.4,"Hanceville":21.5,"Fruitdale":25.8,"Tuscaloosa County":26.2,"Sardis":24.6,"Chilton County":23.1,"Cherokee":22.7,"Daleville":15.4,"Elkmont":15.4,"Wilson":15.4,"Vina":12.7,"Crossville":11.1,"Wilcox Central":10.9,"Tarrant":11.3,"Columbia":3.1,"Ellwood Christian":2.3,"Breakthrough Charter":0.0};
 function recentCalibration(s){return RECENT_CALIBRATION[s.name]??null;}
 const DATA={
   "schools": [
@@ -988,9 +988,21 @@ const DATA={
       "region": 3,
       "enrollment": null,
       "record2025": null,
-      "schedule2026": [],
-      "source": "AHSFHS 2026 region alignment; AHSAA enrollment where available",
-      "strength": 60,
+      "schedule2026": [
+        {"week":1,"opponentId":"flomaton","opponent":"Flomaton","home":true,"region":false,"result":"L","score":0,"opponentScore":30},
+        {"week":2,"opponentId":"thomasville","opponent":"Thomasville","home":false,"region":false,"result":"L","score":6,"opponentScore":34},
+        {"week":3,"opponentId":"university-charter-school","opponent":"University Charter School","home":false,"region":true,"result":"L","score":6,"opponentScore":54},
+        {"week":4,"opponentId":"breakthrough-charter","opponent":"Breakthrough Charter","home":true,"region":true,"result":"W","score":56,"opponentScore":0},
+        {"week":5,"opponentId":"keith","opponent":"Keith","home":false,"region":true,"result":"W","score":67,"opponentScore":27},
+        {"week":6,"opponentId":"alabama-christian","opponent":"Alabama Christian","home":true,"region":false,"result":"L","score":0,"opponentScore":44},
+        {"week":7,"opponentId":"j-f-shields","opponent":"J.F. Shields","home":true,"region":true},
+        {"week":8,"opponentId":"r-c-hatch","opponent":"R.C. Hatch","home":true,"region":true},
+        {"week":9,"opponentId":"linden","opponent":"Linden","home":false,"region":true},
+        {"week":10,"opponentId":"francis-marion","opponent":"Francis Marion","home":false,"region":true},
+        {"week":11,"opponent":"OPEN","home":true,"region":false}
+      ],
+      "source": "AHSFHS Sweet Water team history and 2026 schedule",
+      "strength": 68,
       "region_opponents": [
         "breakthrough-charter",
         "francis-marion",
@@ -1001,26 +1013,25 @@ const DATA={
         "university-charter-school"
       ],
       "program_dna": {
-        "historical_power": 60,
-        "championship_pedigree": 58,
-        "culture": 52,
-        "physicality": 60,
-        "speed": 61,
-        "development": 58,
-        "offense": 55,
-        "defense": 56,
-        "explosiveness": 60,
-        "style": "Balanced",
-        "style_strength": 60,
-        "identity_note": "Baseline profile; will be refined as deeper AHSFHS history is imported."
+        "historical_power": 91,
+        "championship_pedigree": 95,
+        "culture": 94,
+        "physicality": 91,
+        "speed": 68,
+        "development": 87,
+        "offense": 88,
+        "defense": 83,
+        "explosiveness": 74,
+        "style": "Power Run",
+        "style_strength": 95,
+        "identity_note": "Historic 1A power with 11 state championships, deep playoff history, strong physical identity, and major home-field advantage at Nolan Atkins Stadium. Current program is below its historic peak but remains capable of rising quickly."
       },
       "current_state": {
-        "momentum": 60,
-        "coaching": 58,
-        "participation": 60,
-        "expectations": 55
-      },
-      "dna_version": "0.8"
+        "momentum": 49,
+        "coaching": 72,
+        "participation": 76,
+        "expectations": 86
+      },      "dna_version": "0.8"
     },
     {
       "id": "university-charter-school",
@@ -9510,38 +9521,43 @@ const DATA={
       "classification": "4A",
       "region": 6,
       "enrollment": 344.3,
-      "record2025": null,
-      "schedule2026": [],
-      "source": "AHSFHS 2026 region alignment; AHSAA enrollment where available",
-      "strength": 60,
-      "region_opponents": [
-        "alexandria",
-        "central-clay-county",
-        "jacksonville",
-        "leeds",
-        "lincoln",
-        "moody",
-        "sylacauga"
+      "record2025": "14-1",
+      "schedule2026": [
+        {"week":1,"opponentId":"geraldine","opponent":"Geraldine","home":false,"region":false,"result":"L","score":6,"opponentScore":54},
+        {"week":2,"opponentId":"minor","opponent":"Minor","home":false,"region":false,"result":"L","score":6,"opponentScore":47},
+        {"week":3,"opponentId":"central-clay-county","opponent":"Central Clay County","home":false,"region":true,"result":"L","score":12,"opponentScore":36},
+        {"week":4,"opponentId":"moody","opponent":"Moody","home":true,"region":true,"result":"L","score":28,"opponentScore":31},
+        {"week":5,"opponentId":"leeds","opponent":"Leeds","home":true,"region":true,"result":"L","score":28,"opponentScore":61},
+        {"week":6,"opponent":"OPEN","home":true,"region":false},
+        {"week":7,"opponentId":"jacksonville","opponent":"Jacksonville","home":false,"region":false},
+        {"week":8,"opponentId":"alexandria","opponent":"Alexandria","home":false,"region":true},
+        {"week":9,"opponentId":"lincoln","opponent":"Lincoln","home":true,"region":true},
+        {"week":10,"opponentId":"sylacauga","opponent":"Sylacauga","home":false,"region":true},
+        {"week":11,"opponentId":"southside-gadsden","opponent":"Southside Gadsden","home":true,"region":false}
       ],
+      "source": "AHSFHS Anniston team history and 2026 schedule",
+      "strength": 72.5,
+      "region_opponents": ["alexandria","central-clay-county","jacksonville","leeds","lincoln","moody","sylacauga"],
       "program_dna": {
-        "historical_power": 60,
-        "championship_pedigree": 58,
-        "culture": 52,
-        "physicality": 60,
-        "speed": 61,
-        "development": 58,
-        "offense": 55,
-        "defense": 56,
-        "explosiveness": 60,
-        "style": "Balanced",
-        "style_strength": 60,
-        "identity_note": "Baseline profile; will be refined as deeper AHSFHS history is imported."
+        "historical_power": 88,
+        "championship_pedigree": 91,
+        "culture": 82,
+        "physicality": 89,
+        "speed": 96,
+        "development": 76,
+        "offense": 85,
+        "defense": 79,
+        "explosiveness": 94,
+        "style": "Athletic Power",
+        "style_strength": 90,
+        "identity_note": "Historic 4A power with elite athleticism, size and speed. Coaching quality and discipline can determine whether the Bulldogs become a contender or waste a talented roster with poor decisions.",
+        "home_field": 9
       },
       "current_state": {
-        "momentum": 60,
-        "coaching": 58,
-        "participation": 63,
-        "expectations": 55
+        "momentum": 28,
+        "coaching": 45,
+        "participation": 84,
+        "expectations": 82
       },
       "dna_version": "0.8"
     },
@@ -15181,11 +15197,23 @@ const DATA={
       "name": "Donoho",
       "classification": "Single-A",
       "region": 3,
-      "enrollment": null,
-      "record2025": null,
-      "schedule2026": [],
-      "source": "AHSFHS 2026 region alignment; AHSAA enrollment where available",
-      "strength": 60,
+      "enrollment": 89,
+      "record2025": {"w":0,"l":10,"t":0},
+      "schedule2026": [
+        {"week":1,"opponentId":"hope-christian-academy","opponent":"Hope Christian Academy","home":false,"region":true,"result":"L","score":7,"opponentScore":48},
+        {"week":2,"opponentId":"decatur-heritage-christian","opponent":"Decatur Heritage Christian","home":true,"region":false,"result":"W","score":28,"opponentScore":7},
+        {"week":3,"opponentId":"ellwood-christian","opponent":"Ellwood Christian","home":false,"region":true,"result":"W","score":47,"opponentScore":22},
+        {"week":4,"opponentId":"holy-spirit","opponent":"Holy Spirit","home":true,"region":true,"result":"W","score":35,"opponentScore":33},
+        {"week":5,"opponent":"OPEN","home":true,"region":false},
+        {"week":6,"opponentId":"gaylesville","opponent":"Gaylesville","home":false,"region":false},
+        {"week":7,"opponentId":"tuscaloosa-academy","opponent":"Tuscaloosa Academy","home":true,"region":true},
+        {"week":8,"opponent":"OPEN","home":true,"region":false},
+        {"week":9,"opponentId":"victory-christian","opponent":"Victory Christian","home":true,"region":true},
+        {"week":10,"opponentId":"pickens-academy","opponent":"Pickens Academy","home":true,"region":true},
+        {"week":11,"opponentId":"ragland","opponent":"Ragland","home":false,"region":false}
+      ],
+      "source": "AHSFHS Donoho team history and 2026 schedule",
+      "strength": 49.5,
       "region_opponents": [
         "ellwood-christian",
         "holy-spirit",
@@ -15195,24 +15223,25 @@ const DATA={
         "victory-christian"
       ],
       "program_dna": {
-        "historical_power": 60,
-        "championship_pedigree": 58,
-        "culture": 52,
-        "physicality": 60,
-        "speed": 61,
-        "development": 58,
-        "offense": 55,
-        "defense": 56,
-        "explosiveness": 60,
-        "style": "Balanced",
-        "style_strength": 60,
-        "identity_note": "Baseline profile; will be refined as deeper AHSFHS history is imported."
+        "historical_power": 55,
+        "championship_pedigree": 42,
+        "culture": 61,
+        "physicality": 70,
+        "speed": 54,
+        "development": 63,
+        "offense": 62,
+        "defense": 48,
+        "explosiveness": 51,
+        "style": "Wishbone / Power Run",
+        "style_strength": 91,
+        "identity_note": "Small private-school program with a long history of uneven results: frequent losing seasons, occasional peak years, six region championships, and no state titles. Wishbone/power-run identity, physical football, and a meaningful home-field advantage. Capable of surprise peak seasons but usually requires strong development and a good roster to contend.",
+        "home_field": 7
       },
       "current_state": {
-        "momentum": 60,
-        "coaching": 58,
-        "participation": 60,
-        "expectations": 55
+        "momentum": 58,
+        "coaching": 65,
+        "participation": 48,
+        "expectations": 47
       },
       "dna_version": "0.8"
     },
@@ -16714,7 +16743,7 @@ function gameNarrative(win, margin, score, oscore, context){
 function recalibrateAllSchoolStrengths(){ DATA.schools.forEach(s=>{ try{ refreshSchoolStrength(s,{w:0,l:0}); }catch(e){ /* preserve chooser even if a legacy record is incomplete */ } }); }
 recalibrateAllSchoolStrengths();
 function home(){render(`
-<div class="panel"><div class="muted">HEAD COACH MODE • v1.4.8</div><h2>Build an Alabama program. Not just a team.</h2>
+<div class="panel"><div class="muted">HEAD COACH MODE • v1.4.26</div><h2>Build an Alabama program. Not just a team.</h2>
 <p>Start at <b>Week 1</b> with a real 2026 Alabama football school. Your results become your history; real-world 2026 results are not forced onto your dynasty.</p>
 <button onclick="choose()">Choose Your School</button></div>
 <div class="panel"><h3>Real Alabama database</h3><div class="grid">
@@ -16724,13 +16753,27 @@ function home(){render(`
 <div class="card"><b>Real opponents</b><p class="muted">Region opponent pools are now real schools. Thompson and Tuscaloosa County include their 2026 schedules as validation examples.</p></div>
 </div></div>`)}
 function choose(){
- const q=(document.getElementById('schoolSearch')?.value||'').toLowerCase();
+ const q=(document.getElementById('schoolSearch')?.value||'').trim().toLowerCase();
  const cls=document.getElementById('classFilter')?.value||'ALL';
- DATA.schools.forEach(s=>refreshSchoolStrength(s));
- const list=DATA.schools.filter(s=>(cls==='ALL'||s.classification===cls)&&(!q||s.name.toLowerCase().includes(q))).sort((a,b)=>a.classification.localeCompare(b.classification)||a.region-b.region||a.name.localeCompare(b.name));
+ const list=DATA.schools.filter(s=>(cls==='ALL'||s.classification===cls)&&(!q||s.name.toLowerCase().includes(q)))
+   .sort((a,b)=>a.classification.localeCompare(b.classification)||a.region-b.region||a.name.localeCompare(b.name));
  render(`<div class="panel"><div class="row"><div><h2>Choose Your School</h2><span class="muted">2026 football database • ${DATA.schools.length} participating schools</span></div><button class="secondary" onclick="home()">Back</button></div>
- <div class="grid" style="margin-top:14px"><input id="schoolSearch" placeholder="Search school..." value="${q.replace(/"/g,'&quot;')}" style="padding:12px;border-radius:8px;border:1px solid #3a4654;background:#11161d;color:#eef2f7;font-size:16px" oninput="choose()"><select id="classFilter" onchange="choose()" style="padding:12px;border-radius:8px;border:1px solid #3a4654;background:#11161d;color:#eef2f7;font-size:16px"><option value="ALL">All classifications</option>${['1A','2A','3A','4A','5A','6A','Single-A','Double-A'].map(c=>`<option ${cls===c?'selected':''}>${c}</option>`).join('')}</select></div></div>
- <div class="grid">${list.map(s=>`<div class="card"><h3>${s.name}</h3><span class="tag">${s.classification}</span><span class="tag">Region ${s.region}</span>${s.enrollment?`<span class="tag">${s.enrollment.toFixed(2)} students</span>`:''}<p>Overall: ${refreshSchoolStrength(s)}/100 • 2025: ${s.record2025||'—'} • Historical power: ${s.program_dna?.historical_power||s.strength}/100 • Recent performance: ${recentCalibration(s)!=null?recentCalibration(s)+'%':'—'}</p><p class="muted">${s.region_opponents.length} region opponents in database</p><button onclick="setupCoach('${s.id}')">Coach Here</button></div>`).join('')}</div>`);
+ <div class="grid" style="margin-top:14px"><input id="schoolSearch" placeholder="Search school..." value="${q.replace(/"/g,'&quot;')}" style="padding:12px;border-radius:8px;border:1px solid #3a4654;background:#11161d;color:#eef2f7;font-size:16px"><select id="classFilter" style="padding:12px;border-radius:8px;border:1px solid #3a4654;background:#11161d;color:#eef2f7;font-size:16px"><option value="ALL">All classifications</option>${['1A','2A','3A','4A','5A','6A','Single-A','Double-A'].map(c=>`<option value="${c}" ${cls===c?'selected':''}>${c}</option>`).join('')}</select></div></div>
+ <div id="schoolList" class="grid">${list.map(s=>`<div class="card school-card" data-school-name="${s.name.toLowerCase().replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" data-class="${s.classification}"><h3>${s.name}</h3><span class="tag">${s.classification}</span><span class="tag">Region ${s.region}</span>${s.enrollment?`<span class="tag">${displayRating(s.enrollment)} students</span>`:''}<p>Overall: ${displayRating(hardRating(s)).toFixed(1)}/100 • 2025: ${s.record2025||'—'} • Historical power: ${Number(s.program_dna?.historical_power??s.strength??0).toFixed(1)}/100 • Recent performance: ${recentCalibration(s)!=null?Number(recentCalibration(s)).toFixed(1)+'%':'—'}</p><p class="muted">Hard-coded preseason rating • ${(s.region_opponents||[]).length} region opponents in database</p><button onclick="setupCoach('${s.id}')">Coach Here</button></div>`).join('')}</div>`);
+ const searchInput=document.getElementById('schoolSearch');
+ const classSelect=document.getElementById('classFilter');
+ const cards=Array.from(document.querySelectorAll('.school-card'));
+ const filterCards=()=>{
+   const text=searchInput.value.trim().toLowerCase();
+   const selected=classSelect.value;
+   cards.forEach(card=>{
+     const matchName=!text||card.dataset.schoolName.includes(text);
+     const matchClass=selected==='ALL'||card.dataset.class===selected;
+     card.style.display=(matchName&&matchClass)?'':'none';
+   });
+ };
+ searchInput.addEventListener('input',filterCards);
+ classSelect.addEventListener('change',filterCards);
 }
 function setupCoach(id){
  const s=DATA.schools.find(x=>x.id===id);
@@ -16796,6 +16839,8 @@ function refreshSchoolStrength(s, seasonRecord){
  s.strength=Math.round(clamp100(evidence));
  return s.strength;
 }
+function displayRating(v){ const n=Number(v); return Number.isFinite(n)?Math.round((n+Number.EPSILON)*10)/10:0; }
+
 function teamProfile(s, players){
  const d=s.program_dna||{}; const c=s.current_state||{};
  const healthy=(players||[]).filter(p=>!p.injury); const starters=healthy.filter(p=>p.starter);
@@ -16812,7 +16857,7 @@ function teamProfile(s, players){
  const absolute=clamp100(rosterQuality*0.58+programRating*0.30+(d.physicality??60)*0.06+(d.speed??60)*0.06+classificationAbsoluteModifier(s));
  const offense=clamp100((d.offense??60)*0.50+avg*0.23+(d.explosiveness??60)*0.15+(d.speed??60)*0.07+(d.development??60)*0.05);
  const defense=clamp100((d.defense??60)*0.50+avg*0.22+(d.physicality??60)*0.16+(d.speed??60)*0.07+(d.development??60)*0.05);
- return {overall:absolute,programRating,rosterQuality,currentRoster:rosterQuality,currentProgram,depth,offense,defense,style:d.style||'Balanced',rosterSize:healthy.length||dynamicRosterSize(s)};
+ return {overall:displayRating(absolute),programRating:displayRating(programRating),rosterQuality:displayRating(rosterQuality),currentRoster:displayRating(rosterQuality),currentProgram:displayRating(currentProgram),depth:displayRating(depth),offense:displayRating(offense),defense:displayRating(defense),style:d.style||'Balanced',rosterSize:healthy.length||dynamicRosterSize(s)};
 }
 
 function matchupPower(s, players){return teamProfile(s,players).overall;}
@@ -16850,62 +16895,91 @@ function scheduleCompatibility(school,opp){
 function buildUniqueSchedule(){
  const school=state.school;
  const existing=Array.isArray(school.schedule2026)?school.schedule2026:[];
- const used=new Set(), out=[];
- // Preserve validated real schedule entries first, but never allow duplicates.
+ const used=new Set(); let out=[];
+ const gameCount=()=>out.filter(g=>String(g.opponent||'').toUpperCase()!=='OPEN').length;
+ // Preserve the school's real schedule, including OPEN dates. Alabama has 10 games
+ // across 11 playing dates, so OPEN is a bye and must occupy its own week.
  for(const g of existing){
-   const key=(g.opponentId||g.opponent||'').toString().toLowerCase();
-   if(!key || used.has(key)) continue;
-   used.add(key); out.push({...g,week:out.length+1});
-   if(out.length>=10) break;
+   const opponent=String(g.opponent||'').trim();
+   const isOpen=opponent.toUpperCase()==='OPEN' || opponent.toUpperCase()==='OPEN DATE';
+   const key=isOpen?'__open__'+out.length:(g.opponentId||opponent).toString().toLowerCase();
+   if(!isOpen && (!opponent || used.has(key))) continue;
+   if(isOpen || !used.has(key)){
+     if(!isOpen) used.add(key);
+     out.push({...g,week:out.length+1,opponent:isOpen?'OPEN':opponent,home:g.home===undefined?true:g.home,region:false});
+   }
+   if(out.length>=11) break;
  }
- // Region games are required/priority and should always be scheduled before non-region games.
+ // Add missing region games until there are 10 actual games (OPEN does not count).
  const regionIds=[...(school.region_opponents||[])].filter(id=>id!==school.id);
  regionIds.sort(()=>Math.random()-0.5);
  for(const id of regionIds){
-   if(out.length>=10) break;
+   if(gameCount()>=10) break;
    const opp=DATA.schools.find(x=>x.id===id); if(!opp) continue;
    const key=opp.id.toString().toLowerCase(); if(used.has(key)) continue;
    used.add(key); out.push({week:out.length+1,opponentId:opp.id,opponent:opp.name,home:Math.random()<0.5,region:true});
  }
- // Non-region games use a compatibility score instead of a statewide random draw.
+ // Fill remaining games with compatible non-region opponents.
  let pool=DATA.schools.filter(x=>x.id!==school.id && !used.has(x.id.toString().toLowerCase()) && !(school.region_opponents||[]).includes(x.id));
  pool=pool.map(opp=>({opp,score:scheduleCompatibility(school,opp)})).sort((a,b)=>b.score-a.score);
  const chosen=[];
  for(const item of pool){
-   if(out.length+chosen.length>=10) break;
+   if(gameCount()+chosen.length>=10) break;
    const threshold=(school.classification==='1A' && (school.enrollment||180)<100)?12:0;
    if(item.score < threshold) continue;
-   // Prefer the top compatible group, but allow variation between seasons.
    const acceptance=Math.max(0.08,Math.min(0.92,(item.score+10)/100));
    if(Math.random()>acceptance) continue;
    chosen.push(item.opp);
  }
- // Guaranteed fallback: choose the highest-compatible unused opponents, never duplicate.
  for(const item of pool){
-   if(out.length+chosen.length>=10) break;
+   if(gameCount()+chosen.length>=10) break;
    if(chosen.some(x=>x.id===item.opp.id)) continue;
    chosen.push(item.opp);
  }
- for(const opp of chosen.slice(0,10-out.length)){
+ for(const opp of chosen){
+   if(gameCount()>=10) break;
    const key=opp.id.toString().toLowerCase();
    if(used.has(key)) continue;
    used.add(key); out.push({week:out.length+1,opponentId:opp.id,opponent:opp.name,home:Math.random()<0.5,region:false});
  }
- return out.slice(0,10);
+ // Always give the season its 11th playing date. If the real schedule already
+ // has an OPEN, keep it in its original place; otherwise append the bye.
+ if(!out.some(g=>String(g.opponent||'').toUpperCase()==='OPEN')){
+   out.push({week:out.length+1,opponent:'OPEN',home:true,region:false});
+ }
+ out=out.slice(0,11).map((g,i)=>({...g,week:i+1}));
+ return out;
 }
 function getSchedule(){
- if(!state.schedule||state.schedule.length!==10){state.schedule=buildUniqueSchedule();}
+ if(!state.schedule || !Array.isArray(state.schedule) || state.schedule.length<10){state.schedule=buildUniqueSchedule();}
  return state.schedule;
 }
 function currentMatchup(){
  const sch=getSchedule().find(g=>g.week===state.week);
  if(sch) return sch;
- return {week:state.week,opponent:'OPEN DATE',home:true,region:false};
+ return {week:state.week,opponent:'OPEN',home:true,region:false};
+}
+function isOpenWeek(){
+ const m=currentMatchup();
+ return !m || !m.opponent || String(m.opponent).toUpperCase()==='OPEN' || String(m.opponent).toUpperCase()==='OPEN DATE';
+}
+function openWeek(){
+ const m=currentMatchup();
+ render(`<div class="panel"><div class="muted">WEEK ${state.week} • OPEN DATE</div><h2>Off Week</h2><p>No varsity game is scheduled this week. Your players get a chance to recover, develop and prepare for the next opponent.</p>
+ <div class="grid"><button class="choice" onclick="resolveOpenWeek('bond')"><b>Team Bonding</b><br><span class="muted">Build chemistry and locker-room unity.</span></button><button class="choice" onclick="resolveOpenWeek('scout')"><b>Scout Next Opponent</b><br><span class="muted">Use the extra week to improve preparation.</span></button><button class="choice" onclick="resolveOpenWeek('recovery')"><b>Recovery Week</b><br><span class="muted">Prioritize health, rest and player development.</span></button></div></div>`);
+}
+function resolveOpenWeek(choice){
+ const effects={bond:[2,2,'The team spent the week together and came out closer.'],scout:[1,2,'Extra preparation sharpened the staff\'s game plan for the next opponent.'],recovery:[1,3,'The roster got valuable recovery time and several players benefited from the lighter week.']};
+ const [morale,dev,text]=effects[choice]||effects.recovery;
+ state.teamMorale=Math.max(0,Math.min(100,(state.teamMorale??60)+morale));
+ state.players.forEach(p=>{if(!p.injury && p.grade<12 && Math.random()<0.45){p.exp+=dev;p.ability=Math.min(p.potential,p.ability+(Math.random()<0.25?1:0));}});
+ state.log.unshift(`OPEN WEEK: ${text}`);
+ render(`<div class="panel"><div class="muted">WEEK ${state.week} • OPEN DATE • OUTCOME</div><h2>Off Week Complete</h2><div class="card"><h3>Decision</h3><p>${choice==='bond'?'Team Bonding':choice==='scout'?'Scout Next Opponent':'Recovery Week'}</p></div><div class="card"><h3>Outcome</h3><p>${text}</p></div><div class="card"><h3>Consequences</h3><p>Team morale changed by +${morale}. Player development and recovery continued without a varsity game.</p></div><div class="card"><h3>What Happens Next</h3><p>Your season resumes on the next scheduled game date.</p></div><button onclick="advance()">Continue to next week</button></div>`);
 }
 function dashboard(){
  let s=state.school,p=state.players; refreshSchoolStrength(s,{w:state.record[0],l:state.record[1]}); let m=currentMatchup(),tp=teamProfile(s,p),dna=s.program_dna||{};
- render(`<div class="panel"><div class="row"><div><div class="muted">2026 • WEEK ${state.week}</div><h2>${s.name}</h2><div class="muted">Head Coach: <b>${state.coach}</b></div></div><button class="secondary" onclick="choose()">Change School</button></div><div class="grid"><div class="card"><div class="muted">Record</div><div class="stat">${state.record[0]}–${state.record[1]}</div></div><div class="card"><div class="muted">Classification</div><div class="stat">${s.classification}</div></div><div class="card"><div class="muted">Region</div><div class="stat">${s.region}</div></div><div class="card"><div class="muted">Enrollment</div><div class="stat">${s.enrollment?s.enrollment.toFixed(0):'—'}</div></div></div><div class="panel"><div class="muted">PROGRAM DNA</div><div class="grid"><div class="card"><div class="muted">Absolute Team Strength</div><div class="stat">${tp.overall}</div><div class="muted">Class-adjusted</div></div><div class="card"><div class="muted">Program Rating</div><div class="stat">${tp.programRating}</div><div class="muted">AHSFHS recent win %: ${recentCalibration(s)!=null?recentCalibration(s)+"%":"—"}</div></div><div class="card"><div class="muted">Roster Size</div><div class="stat">${tp.rosterSize}</div></div><div class="card"><div class="muted">Historical Power</div><div class="stat">${dna.historical_power}</div></div><div class="card"><div class="muted">Offense</div><div class="stat">${tp.offense}</div></div><div class="card"><div class="muted">Defense</div><div class="stat">${tp.defense}</div></div></div><p><b>Identity:</b> ${dna.style||'Balanced'} • <b>Physicality:</b> ${dna.physicality||60} • <b>Speed:</b> ${dna.speed||60} • <b>Development:</b> ${dna.development||60} • <b>Discipline:</b> ${dna.discipline??60}</p><p class="muted">${dna.identity_note||''}</p></div>
- <div class="panel"><div class="muted">NEXT FRIDAY</div><h2>${m.opponent?`${s.name} vs. ${m.opponent}`:'OPEN DATE'}</h2><p>${m.date||''} ${m.home===true?'• Home':m.home===false?'• Away':''} ${m.region?'• Region Game':'• Non-Region'}</p><button onclick="practice()">Review Practice Report</button></div>
+ render(`<div class="panel"><div class="row"><div><div class="muted">2026 • WEEK ${state.week}</div><h2>${s.name}</h2><div class="muted">Head Coach: <b>${state.coach}</b></div></div><button class="secondary" onclick="choose()">Change School</button></div><div class="grid"><div class="card"><div class="muted">Record</div><div class="stat">${state.record[0]}–${state.record[1]}</div></div><div class="card"><div class="muted">Classification</div><div class="stat">${s.classification}</div></div><div class="card"><div class="muted">Region</div><div class="stat">${s.region}</div></div><div class="card"><div class="muted">Enrollment</div><div class="stat">${s.enrollment?s.enrollment.toFixed(0):'—'}</div></div></div><div class="panel"><div class="muted">PROGRAM DNA</div><div class="grid"><div class="card"><div class="muted">Absolute Team Strength</div><div class="stat">${Number(tp.overall).toFixed(1)}</div><div class="muted">Class-adjusted</div></div><div class="card"><div class="muted">Program Rating</div><div class="stat">${Number(tp.programRating).toFixed(1)}</div><div class="muted">AHSFHS recent win %: ${recentCalibration(s)!=null?recentCalibration(s)+"%":"—"}</div></div><div class="card"><div class="muted">Roster Size</div><div class="stat">${tp.rosterSize}</div></div><div class="card"><div class="muted">Historical Power</div><div class="stat">${dna.historical_power}</div></div><div class="card"><div class="muted">Offense</div><div class="stat">${tp.offense}</div></div><div class="card"><div class="muted">Defense</div><div class="stat">${tp.defense}</div></div></div><p><b>Identity:</b> ${dna.style||'Balanced'} • <b>Physicality:</b> ${dna.physicality||60} • <b>Speed:</b> ${dna.speed||60} • <b>Development:</b> ${dna.development||60} • <b>Discipline:</b> ${dna.discipline??60}</p><p class="muted">${dna.identity_note||''}</p></div>
+ <div class="panel"><div class="muted">${isOpenWeek()?'OPEN DATE':'NEXT FRIDAY'}</div><h2>${isOpenWeek()?'OFF WEEK':`${s.name} vs. ${m.opponent}`}</h2><p>${m.date||''} ${isOpenWeek()?'• No Varsity Game':m.home===true?'• Home':m.home===false?'• Away':''} ${!isOpenWeek()?(m.region?'• Region Game':'• Non-Region'):''}</p><button onclick="${isOpenWeek()?'openWeek()':'practice()'}">${isOpenWeek()?'Manage Open Week':'Review Practice Report'}</button></div>
  <div class="panel"><h3>Roster snapshot</h3><table><tr><th>Player</th><th>Grade</th><th>Pos</th><th>Ability</th><th>Potential</th><th>Experience</th><th>Status</th></tr>${p.slice(0,48).map(x=>`<tr><td>${x.name}*</td><td>${x.grade}</td><td>${x.pos}</td><td>${x.ability}</td><td>${x.potential}</td><td>${x.exp}</td><td>${x.injury?'🚑 '+x.injury.name:'Healthy'}</td></tr>`).join('')}</table><p class="muted">* Computer-generated fictional player.</p></div>`);
 }
 function maybeInjury(){
@@ -16964,12 +17038,26 @@ function finalScoreAfterClock(p,accept){ const elapsedFactor=accept?(0.55+Math.r
 function coachClockReaction(accept,p){ const opponent=DATA.schools.find(s=>s.id===p.opponentId); const rival=rivalryInfo(state.school.id,p.opponentId); if(accept){applyTeamMorale(2);state.coachReputation=(state.coachReputation||50)+1;return {tone:'Positive',text:rival?`Coach ${opponent?.name||p.opponent} appreciated the sportsmanship despite the rivalry.`:`The opposing coach appreciated the decision to protect players once the game was out of hand.`,sports:5,relationship:5};} const furious=Math.random()<0.82; if(furious){applyTeamMorale(-2);state.coachReputation=(state.coachReputation||50)-2;return {tone:'Furious',text:`Coach ${opponent?.name||p.opponent} was furious that you declined the running clock with a ${p.score}-${p.oscore} lead.`,sports:-7,relationship:-9};}return {tone:'Negative',text:`Coach ${opponent?.name||p.opponent} was unhappy with the decision to keep the clock normal.`,sports:-4,relationship:-5}; }
 function maybeNewspaperComplaint(accept,p,reaction){ if(accept||reaction.tone!=='Furious'||Math.random()>0.34)return null; state.mediaStories=state.mediaStories||[]; const headline=`Coach ${DATA.schools.find(s=>s.id===p.opponentId)?.name||p.opponent} blasts ${state.school.name} after running-clock decision`; const story=`After a ${p.score}-${p.oscore} game, the opposing coach publicly criticized your decision to decline the running clock. The story is now circulating locally.`; state.mediaStories.unshift({week:state.week,headline,story}); return {headline,story}; }
 function friday(){
+ try{
+   if(!state || !state.school || !Array.isArray(state.players)) throw new Error('Dynasty state is not ready.');
+   if(typeof getSchedule!=='function') throw new Error('Schedule system is unavailable.');
+   const schedule=getSchedule();
+   if(!schedule.find(g=>g.week===state.week)) throw new Error('This week does not have a scheduled game.');
+   if(isOpenWeek()){ openWeek(); return; }
+   simulateFriday();
+ }catch(err){
+   console.error('Friday Night simulation error:',err);
+   const msg=err&&err.message?err.message:'Unknown game-simulation error';
+   render('<div class="panel"><div class="muted">FRIDAY NIGHT</div><h2>The game simulation hit a snag.</h2><div class="card"><p>'+msg.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</p><p class="muted">Your dynasty has not been advanced or recorded. Try the simulation again.</p></div><button onclick="friday()">Retry Friday Night</button><button class="secondary" onclick="dashboard()">Back to Dashboard</button></div>');
+ }
+}
+function simulateFriday(){
  let starters=state.players.filter(p=>p.starter&&!p.injury), avg=starters.length?starters.reduce((a,p)=>a+p.ability,0)/starters.length:55;
  let matchup=currentMatchup(), oppSchool=DATA.schools.find(x=>x.name===matchup.opponent)||DATA.schools.find(x=>x.id===matchup.opponentId); let opp=oppSchool?matchupPower(oppSchool,[]):60;
  let weather=chooseWeather(); let tp=teamProfile(state.school,state.players); let oppTp=oppSchool?teamProfile(oppSchool,[]):{overall:60,offense:60,defense:60,style:'Balanced'};
  let runAvg=starters.filter(p=>p.pos==='RB'||p.pos==='OL').reduce((a,p)=>a+p.ability,0)/(starters.filter(p=>p.pos==='RB'||p.pos==='OL').length||1); let passAvg=starters.filter(p=>p.pos==='QB'||p.pos==='WR'||p.pos==='TE').reduce((a,p)=>a+p.ability,0)/(starters.filter(p=>p.pos==='QB'||p.pos==='WR'||p.pos==='TE').length||1);
  let styleBonus=0; const style=(state.school.program_dna?.style||'').toLowerCase(); if(weather.field==='muddy'&&style.includes('run'))styleBonus+=4; if(weather.name==='Windy'&&style.includes('spread'))styleBonus-=3; if(style.includes('defense')&&oppTp.offense>tp.defense)styleBonus+=2;
- let homeField=matchup.home?4+Math.random()*4:-(3+Math.random()*4); let gap=(tp.overall-opp)+homeField+styleBonus;
+ let homeField=matchup.home?(4+Math.random()*4+(state.school.home_field||0)):(-(3+Math.random()*4)); let gap=(tp.overall-opp)+homeField+styleBonus;
  let baseA=22+gap*.72+(tp.offense-70)*.12; let baseB=22-gap*.68+(oppTp.offense-70)*.12; baseA+=weather.run*(runAvg-67)/10-weather.pass*(passAvg-67)/18; baseB+=weather.run*(50-avg)/30;
  let mismatch=Math.abs(gap), volatility=.48+Math.min(.55,mismatch/65); if(mismatch>30){baseA+=gap>0?Math.random()*12:0;baseB+=gap<0?Math.random()*12:0;}
  let score=scoreFor(clamp(baseA,3,82),volatility), oscore=scoreFor(clamp(baseB,2,72),volatility);
@@ -17025,10 +17113,69 @@ function showBracket(){
  render(`<div class="panel"><div class="muted">PLAYOFF BRACKET</div><h2>${state.school.name} • Class ${cls}</h2><p><b>${playoffBracketLabel()}</b></p><div class="grid">${cards}</div><button onclick="showPlayoffRound()">Back to Playoffs</button></div>`);
 }
 function playoffStatus(){ ensureWorldStandings(); const finish=regionFinish(state.school.id); return finish && finish<=(state.school.classification==='6A'?6:4)?'made':'missed'; }
-function playoffs(){ const status=playoffStatus(); buildPlayoffField(); state.regionChampion=regionFinish(state.school.id)===1; if(status==='missed'){finishSeason(`Your season ended after the regular season. ${state.school.name} finished ${regionFinish(state.school.id)}th in Region ${state.school.region} and did not qualify for the ${state.school.classification} playoffs.`);return;} state.playoffRound=1; state.playoffSlot=state.playoffSeed; state.playoffOpponent=null; showPlayoffRound(); }
-function playoffOpponent(){ const cls=state.school.classification, seed=state.playoffSeed, r=state.school.region; const rs=regionRanksFor(cls,r); if(cls==='6A'&&seed<=2){return `First-round bye — Region ${r} #${seed}`;} if(cls==='6A'){ const paired=(r===1||r===2)?(r===1?2:1):(r===3?4:3); const other=regionRanksFor(cls,paired); const target=seed===3?6:seed===4?5:seed===5?4:3; return other[target-1]?.name||'Playoff Opponent'; } const pairs={1:[3,4],2:[1,3],3:[4,1],4:[2,1],5:[2,1],6:[4,1],7:[2,4],8:[1,2]}; const map=pairs[r]||[r===1?2:1,4]; const target=(seed===1||seed===2)?4:seed===3?2:1; const oppRegion=map[0]===r?map[1]:map[0]; const arr=regionRanksFor(cls,oppRegion); return arr[target-1]?.name||'Playoff Opponent'; }
+function playoffs(){
+ const status=playoffStatus(); buildPlayoffField(); state.regionChampion=regionFinish(state.school.id)===1;
+ if(status==='missed'){finishSeason(`Your season ended after the regular season. ${state.school.name} finished ${regionFinish(state.school.id)}th in Region ${state.school.region} and did not qualify for the ${state.school.classification} playoffs.`);return;}
+ state.playoffRound=1; state.playoffSlot=state.playoffSeed; state.playoffOpponent=null;
+ state.playoffOpponents=buildPlayoffPath();
+ showPlayoffRound();
+}
+function buildPlayoffPath(){
+ const cls=state.school.classification, field=state.playoffField||buildPlayoffField(), mine=field.find(t=>t.id===state.school.id);
+ const others=field.filter(t=>t.id!==state.school.id);
+ const rounds=cls==='6A'?5:4; const path=[]; let pool=others.slice();
+ for(let round=1;round<=rounds;round++){
+   if(cls==='6A'&&state.playoffSeed<=2&&round===1){path.push(null);continue;}
+   const previous=path.filter(Boolean).map(x=>x.id);
+   const candidates=pool.filter(t=>!previous.includes(t.id));
+   let pick=null;
+   if(candidates.length){
+     // Favor plausible bracket opponents: adjacent seed/region first, but never reuse an opponent.
+     const ranked=candidates.slice().sort((a,b)=>{
+       const da=Math.abs((a.regionSeed||4)-(mine?.regionSeed||4))+Math.abs(Number(a.region)-Number(mine?.region));
+       const db=Math.abs((b.regionSeed||4)-(mine?.regionSeed||4))+Math.abs(Number(b.region)-Number(mine?.region));
+       return da-db || ((b.wins||0)-(a.wins||0));
+     });
+     const top=ranked.slice(0,Math.min(4,ranked.length)); pick=top[Math.floor(Math.random()*top.length)];
+   }
+   path.push(pick);
+ }
+ return path;
+}
+function playoffOpponent(){
+ const cls=state.school.classification, round=state.playoffRound||1;
+ if(cls==='6A'&&state.playoffSeed<=2&&round===1)return `First-round bye — Region ${state.school.region} #${state.playoffSeed}`;
+ const opp=state.playoffOpponents?.[round-1];
+ return opp?.name||'Playoff Opponent';
+}
 function showPlayoffRound(){ const roundNames=state.school.classification==='6A'?['First Round','Second Round','Quarterfinal','Semifinal','State Championship']:['First Round','Quarterfinal','Semifinal','State Championship']; const round=state.playoffRound; const bye=state.school.classification==='6A'&&state.playoffSeed<=2&&round===1; const opp=playoffOpponent(); render(`<div class="panel"><div class="muted">PLAYOFFS • ${roundNames[round-1]}</div><h2>${state.school.name}</h2><p><b>${playoffBracketLabel()}</b></p><div class="card"><h3>${bye?'⏭️ First-Round Bye':'🏈 Playoff Matchup'}</h3><p>${bye?`You finished Region ${state.school.region} in the top two and advance directly to the Second Round.`:`Your opponent: <b>${opp}</b>`}</p><p>Region finish: <b>${regionFinish(state.school.id)}</b></p></div><button onclick="playoffGame()">${bye?'Advance to Second Round':'Play '+roundNames[round-1]}</button><button class="secondary" onclick="showBracket()">View Bracket</button></div>`); }
-function playoffGame(){ const cls=state.school.classification; if(cls==='6A'&&state.playoffSeed<=2&&state.playoffRound===1){state.playoffRound=2;showPlayoffRound();return;} const roundNames=cls==='6A'?['First Round','Second Round','Quarterfinal','Semifinal','State Championship']:['First Round','Quarterfinal','Semifinal','State Championship']; const round=state.playoffRound; const oppName=playoffOpponent(); let oppSchool=DATA.schools.find(s=>s.name===oppName); let opp=oppSchool?matchupPower(oppSchool,[]):70+Math.random()*20; let avg=state.players.filter(p=>p.starter&&!p.injury).reduce((a,x)=>a+x.ability,0)/(state.players.filter(p=>p.starter&&!p.injury).length||1); let gap=(avg+state.school.strength*.35)-(opp+70*.35); let score=scoreFor(clamp(21+gap*.7,5,68),.6),oscore=scoreFor(clamp(21-gap*.62,4,62),.6);if(score===oscore)score++;const win=score>oscore; const payload={score,oscore,halftimeA:Math.round(score*.32),halftimeB:Math.round(oscore*.32),opponent:oppName,home:true,region:false,date:'Playoff Friday',weather:chooseWeather()}; if(win){state.log.unshift(`${roundNames[round-1]}: WIN ${score}-${oscore} over ${oppName}`);state.playoffRound++;if(round===roundNames.length){finishSeason(`🏆 STATE CHAMPIONS! ${state.school.name} won the ${cls} state championship.`);return;} showPlayoffRound();}else{state.log.unshift(`${roundNames[round-1]}: LOSS ${score}-${oscore} to ${oppName}`);finishSeason(`Your season ended in the ${roundNames[round-1].toLowerCase()}, ${score}-${oscore} to ${oppName}.`);}}
+function playoffGame(){
+ const cls=state.school.classification;
+ if(cls==='6A'&&state.playoffSeed<=2&&state.playoffRound===1){state.playoffRound=2;showPlayoffRound();return;}
+ const roundNames=cls==='6A'?['First Round','Second Round','Quarterfinal','Semifinal','State Championship']:['First Round','Quarterfinal','Semifinal','State Championship'];
+ const round=state.playoffRound;
+ const roundName=roundNames[round-1]||'Playoff Round';
+ const oppName=playoffOpponent();
+ let oppSchool=DATA.schools.find(s=>s.name===oppName);
+ let opp=oppSchool?matchupPower(oppSchool,[]):70+Math.random()*20;
+ let starters=state.players.filter(p=>p.starter&&!p.injury);
+ let avg=starters.reduce((a,x)=>a+x.ability,0)/(starters.length||1);
+ let gap=(avg+state.school.strength*.35)-(opp+70*.35);
+ let score=scoreFor(clamp(21+gap*.7,5,68),.6),oscore=scoreFor(clamp(21-gap*.62,4,62),.6);
+ if(score===oscore)score++;
+ const win=score>oscore;
+ const halftimeA=Math.min(score,Math.max(0,Math.round(score*.32)));
+ const halftimeB=Math.min(oscore,Math.max(0,Math.round(oscore*.32)));
+ const nextRound=roundNames[round]||'the offseason';
+ if(win){
+   state.log.unshift(`${roundName}: WIN ${score}-${oscore} over ${oppName}`);
+   state.playoffRound++;
+   render(`<div class="panel"><div class="muted">PLAYOFF RESULT • ${roundName}</div><h2>🏈 ${state.school.name} ${score} — ${oscore} ${oppName}</h2><div class="card"><p><b>Halftime:</b> ${halftimeA}–${halftimeB}</p><p><b>Result:</b> <span class="good">WIN</span></p><p><b>${state.school.name}</b> advances to the <b>${round===roundNames.length?'State Championship — CHAMPIONSHIP WON':'next round'}</b>.</p></div><button onclick="${round===roundNames.length?`finishSeason('🏆 STATE CHAMPIONS! ${state.school.name} won the ${cls} state championship, ${score}-${oscore} over ${oppName}.')`:'showPlayoffRound()'}">${round===roundNames.length?'Finish Season as State Champions':'Continue to '+nextRound}</button><button class="secondary" onclick="showBracket()">View Bracket</button></div>`);
+ }else{
+   state.log.unshift(`${roundName}: LOSS ${score}-${oscore} to ${oppName}`);
+   render(`<div class="panel"><div class="muted">PLAYOFF RESULT • ${roundName}</div><h2>🏈 ${state.school.name} ${score} — ${oscore} ${oppName}</h2><div class="card"><p><b>Halftime:</b> ${halftimeA}–${halftimeB}</p><p><b>Result:</b> <span class="warn">LOSS</span></p><p>Your playoff run ends in the ${roundName.toLowerCase()}.</p></div><button onclick="finishSeason('Your season ended in the ${roundName.toLowerCase()}, ${score}-${oscore} to ${oppName}.')">Continue</button><button class="secondary" onclick="showBracket()">View Bracket</button></div>`);
+ }
+}
 function resolveStaffVacancy(role,promote){
   state.staff=state.staff||makeStaff();
   const roleMap={OC:'RB',DC:'OL'}; const source=state.staff[roleMap[role]];
@@ -17147,7 +17294,9 @@ function keep(name){
 }
 function advance(){
  if(state.seasonComplete)return;
- if(state.week>=10){playoffs();return;}
+ // Regular season uses 10 games across 11 playing dates. OPEN is a real bye,
+ // not an opponent and not a win/loss. Playoffs begin after Week 11.
+ if(state.week>=11){playoffs();return;}
  state.week++;
  state.players.forEach(p=>{if(p.grade<12&&Math.random()<0.45){p.exp+=4;p.ability=Math.min(p.potential,p.ability+(Math.random()<0.35?1:0));}});
  dashboard();
@@ -17156,7 +17305,9 @@ function advance(){
 /* ===================== v0.9 DYNASTY SYSTEMS ===================== */
 const RIVALRIES={
   "calhoun|central-hayneville":{name:"Lowndes Throwdown",intensity:92,trophy:true},
-  "central-hayneville|calhoun":{name:"Lowndes Throwdown",intensity:92,trophy:true}
+  "central-hayneville|calhoun":{name:"Lowndes Throwdown",intensity:92,trophy:true},
+  "donoho|victory-christian":{name:"Donoho–Victory Christian Rivalry",intensity:88,trophy:false},
+  "victory-christian|donoho":{name:"Donoho–Victory Christian Rivalry",intensity:88,trophy:false}
 };
 const STAFF_FIRST=["Marcus","David","Jason","Chris","Ryan","Michael","Josh","Derek","Justin","Matt","Brandon","Tyler","Kevin","Aaron","Cody","Jordan","Brian","Eric"];
 const STAFF_LAST=["Williams","Reynolds","Carter","Mitchell","Davis","Johnson","Taylor","Morgan","Brooks","Parker","Morris","Coleman","Turner","Bennett","Harris","Foster"];
@@ -17180,9 +17331,41 @@ function seasonStatLine(){
   const wrs=st.filter(p=>p.pos==='WR'), lbs=st.filter(p=>p.pos==='LB'), dls=st.filter(p=>p.pos==='DL'), dbs=st.filter(p=>p.pos==='DB');
   return {qb,rb,wrs,lbs,dls,dbs};
 }
+function randomWorldRecord(){
+  const r=Math.random();
+  let wins;
+  if(r<0.01) wins=10;
+  else if(r<0.05) wins=9;
+  else if(r<0.14) wins=8;
+  else if(r<0.30) wins=7;
+  else if(r<0.52) wins=6;
+  else if(r<0.75) wins=5;
+  else if(r<0.89) wins=4;
+  else if(r<0.96) wins=3;
+  else if(r<0.99) wins=2;
+  else wins=1;
+  const losses=10-wins;
+  return {wins,losses};
+}
+function seedWorldStandings(){
+  state.worldStandings=state.worldStandings||{};
+  DATA.schools.forEach(s=>{
+    if(state.worldStandings[s.id]) return;
+    const rec=randomWorldRecord();
+    const regionGames=Math.min(7,Math.max(4,Math.round(4+Math.random()*3)));
+    const rw=Math.min(regionGames,Math.max(0,Math.round(rec.wins*(regionGames/10)+(Math.random()*3-1))));
+    state.worldStandings[s.id]={id:s.id,name:s.name,classification:s.classification,region:s.region,wins:rec.wins,losses:rec.losses,regionWins:rw,regionLosses:regionGames-rw,pointsFor:Math.max(80,rec.wins*28+Math.round(Math.random()*90)),pointsAgainst:Math.max(80,rec.losses*25+Math.round(Math.random()*90))};
+  });
+}
 function ensureWorldStandings(){
   state.worldStandings=state.worldStandings||{};
-  DATA.schools.forEach(s=>{if(!state.worldStandings[s.id])state.worldStandings[s.id]={id:s.id,name:s.name,classification:s.classification,region:s.region,wins:0,losses:0,regionWins:0,regionLosses:0,pointsFor:0,pointsAgainst:0};});
+  seedWorldStandings();
+  DATA.schools.forEach(s=>{if(!state.worldStandings[s.id]){const rec=randomWorldRecord();state.worldStandings[s.id]={id:s.id,name:s.name,classification:s.classification,region:s.region,wins:rec.wins,losses:rec.losses,regionWins:0,regionLosses:0,pointsFor:0,pointsAgainst:0};}});
+  if(state.school&&state.record){
+    const me=state.worldStandings[state.school.id]||{};
+    me.wins=state.record[0]; me.losses=state.record[1]; me.regionWins=state.regionWins||0; me.regionLosses=state.regionLosses||0;
+    state.worldStandings[state.school.id]=me;
+  }
 }
 function regionFinish(schoolId){
   ensureWorldStandings();
@@ -17247,8 +17430,18 @@ function coachOffers(){
  return candidates.slice(0,count).map(x=>x.s);
 }
 function jobDecision(school,accept){
- if(accept){state.log.unshift(`Coach ${state.coach} accepted the head-coaching job at ${school.name}.`);startNextSeason(school.id);}
- else{state.coachReputation=(state.coachReputation||50)+3;state.school.current_state.momentum=clamp((state.school.current_state?.momentum||60)+2,0,100);state.log.unshift(`Coach ${state.coach} turned down ${school.name}. Players respected the decision.`);nextSeasonScreen('You stayed. Your players respect the decision and believe in the program.');}
+ if(accept){
+  state.log.unshift(`Coach ${state.coach} accepted the head-coaching job at ${school.name}.`);
+  startNextSeason(school.id);
+ }else{
+  state.coachReputation=(state.coachReputation||50)+3;
+  state.school.current_state.momentum=clamp((state.school.current_state?.momentum||60)+2,0,100);
+  state.log.unshift(`Coach ${state.coach} turned down ${school.name}. Players respected the decision.`);
+  // A declined offseason offer means the coach is staying at the current school.
+  // Start the next season immediately instead of leaving seasonComplete=true and
+  // returning to the old season/week state, which could reopen a random game/JV flow.
+  startNextSeason(state.school.id);
+ }
 }
 function startNextSeason(id){const old=state.school;const coach=state.coach;state.school=DATA.schools.find(s=>s.id===id);state.season=(state.season||2026)+1;state.week=1;state.record=[0,0];state.regionWins=0;state.regionLosses=0;state.regionChampion=false;state.seasonComplete=false;state.players=[];state.usedNames=new Set();state.log=[];state.awards=[];state.schedule=null;state.lastWeather=null;state.worldStandings={};state.gameLog=[];state.mediaStories=[];state.lastMediaStory=null;state.runningClockPending=null;state.coach=coach;state.staff=makeStaff();refreshSchoolStrength(state.school,{w:0,l:0}); const count=dynamicRosterSize(state.school);for(let i=0;i<count;i++){let grade=i<Math.floor(count*.2)?12:i<Math.floor(count*.45)?11:i<Math.floor(count*.72)?10:9;let dna=state.school.program_dna||{},cs=state.school.current_state||{},base=48+Math.floor(Math.random()*28)+(state.school.strength-60)*.12+(dna.development-60)*.08+(cs.momentum-60)*.05;let p={name:uniqueName(),grade,pos:pos[i%pos.length],ability:Math.round(clamp(base,40,92)),potential:Math.min(99,Math.round(base+8+Math.random()*20)),exp:grade>=11?55:grade>=10?28:8,starter:i<Math.min(8,count),injury:null,morale:70};initPlayerStats(p);state.players.push(p);}nextSeasonScreen(`You are now the head coach at ${state.school.name}. The dynasty continues into ${state.season}.`);}
 function nextSeasonScreen(msg){render(`<div class="panel"><div class="muted">DYNASTY CONTINUES</div><h2>${msg}</h2><p><b>Coach:</b> ${state.coach}</p><p><b>School:</b> ${state.school.name} • ${state.school.classification}</p><button onclick="dashboard()">Begin ${state.season} Season</button></div>`);}
@@ -17402,17 +17595,35 @@ startNextSeason=function(id){_startNextSeason_v10(id);state.teamCulture={chemist
 
 
 /* ===================== v1.4.2 CONSOLIDATED DYNASTY PATCH ===================== */
+function commonFootballScore(raw, finalScore){
+  raw=Number(raw)||0; finalScore=Math.max(0,Number(finalScore)||0);
+  if(finalScore<=0)return 0;
+  const candidates=[0,3,6,7,8,9,10,12,13,14,15,16,17,20,21,24,27,28,30,31,34,35,38,40,41,42,45,48,49,52,56,59,60,63,66,70,77];
+  const allowed=candidates.filter(v=>v<=finalScore);
+  if(!allowed.length)return 0;
+  return allowed.reduce((best,v)=>Math.abs(v-raw)<Math.abs(best-raw)?v:best,allowed[0]);
+}
 function safeHalftimeScore(finalScore){
   finalScore=Math.max(0,Number(finalScore)||0);
   if(finalScore<=3) return finalScore;
-  // Normal halves cluster around roughly 20-35% of a team's final points.
-  // Extreme halftime totals remain possible, but require a genuine tail roll.
-  let frac=0.18+Math.random()*0.18;
-  if(Math.random()<0.015) frac=0.38+Math.random()*0.12;
-  let raw=finalScore*frac;
-  let rounded=commonFootballScore(raw,finalScore);
-  if(finalScore>=21 && rounded>=35 && Math.random()>0.02) rounded=commonFootballScore(finalScore*(0.20+Math.random()*0.12),finalScore);
-  return Math.min(rounded,finalScore);
+  // Halftime is a real checkpoint, not an independent random score.
+  // Prevent absurd second-half explosions such as 16-0 -> 79-0.
+  // Normal games reach roughly 38-58% of a team's final points by halftime.
+  let frac=0.38+Math.random()*0.20;
+  // Rare slow starts are allowed, but only when the final score is modest.
+  if(finalScore<=35 && Math.random()<0.08) frac=0.24+Math.random()*0.10;
+  // For very high final totals, require enough points at halftime that the
+  // second half remains within a plausible high-school scoring range.
+  if(finalScore>=56){
+    const minSecondHalf=21;
+    const maxSecondHalf=42;
+    const minHalftime=Math.max(0,finalScore-maxSecondHalf);
+    const maxHalftime=Math.min(finalScore,finalScore-minSecondHalf);
+    let target=finalScore*frac;
+    target=Math.max(minHalftime,Math.min(maxHalftime,target));
+    return commonFootballScore(target,finalScore);
+  }
+  return Math.min(commonFootballScore(finalScore*frac,finalScore),finalScore);
 }
 function seasonDifficultyProfile(s){
   const strength=Number(s?.strength||60);
@@ -17534,7 +17745,7 @@ function transferCandidate(){
   const p={name:uniqueName(),grade:10+Math.floor(Math.random()*2),pos:'QB',ability:54+Math.floor(Math.random()*18),potential:68+Math.floor(Math.random()*24),exp:62+Math.floor(Math.random()*20),starter:false,injury:null,morale:72,transfer:true,transferOriginClass:'6A',personality:['competitive','confident','fiery','loyal'][Math.floor(Math.random()*4)]};
   initPlayerStats(p);return p;
 }
-function showTransferQB(){
+function showTransferQB(){ if(state.week!==1){ state.pendingLockerEvent=null; state.pendingTransferQB=null; render('<div class="panel"><h2>QB Transfer Window Closed</h2><p>The transfer-QB decision window is only available before the first varsity game of the season.</p><button onclick="practice()">Return to Practice</button></div>'); return; }
   const t=state.pendingTransferQB, z=state.players.find(p=>p.pos==='QB'); if(!t)return dashboard();
   const zion=z||{name:'your returning QB',grade:11,ability:55,exp:55,morale:70};
   render(`<div class="panel"><div class="muted">🔄 TRANSFER / QB ROOM</div><h2>${state.school.name} has a quarterback decision.</h2><div class="card"><p><b>${zion.name}</b> is returning at quarterback after last season.</p><p><b>${t.name}</b> has transferred in from a <b>6A program</b>. He didn't play badly, but he didn't play great either. His big-program experience could help push this team over the hump — or divide the locker room.</p></div><div class="grid"><div class="card"><h3>${zion.name}</h3><p>QB • Grade ${zion.grade} • Ability ${zion.ability} • Experience ${zion.exp}</p></div><div class="card"><h3>${t.name}</h3><p>QB • Grade ${t.grade} • Ability ${t.ability} • Experience ${t.exp}</p><p>Eligibility: <b>Pending</b></p></div></div><button class="choice" onclick="resolveTransferQB('zionMove')">Ask ${zion.name} to move positions</button><button class="choice" onclick="resolveTransferQB('transferMove')">Ask ${t.name} to move positions</button><button class="choice" onclick="resolveTransferQB('battle')">Hold a true QB battle</button><button class="choice" onclick="resolveTransferQB('zion')">Stick with ${zion.name}; tell the transfer he must earn it</button><button class="choice" onclick="resolveTransferQB('sit')">Use eligibility concerns and sit ${t.name} for a year</button></div>`);
@@ -17567,7 +17778,8 @@ cultureEvent=function(){
   if(state.pendingDiscovery||state.pendingTransferQB)return null;
   const ps=state.players.filter(p=>!p.injury);
   if(ps.length<4)return null;
-  const eligibleWeek=state.week<=9;
+  // Transfer-QB decisions are preseason/Week 1 only. Once the first varsity game is played, no new midseason transfer-QB scenario can appear.
+  const eligibleWeek=state.week===1;
   if(eligibleWeek && Math.random()<0.12){
     state.pendingDiscovery=v142DiscoveryCandidate(); state.pendingLockerEvent={type:'discovery'};
     state.situationCooldownUntil=state.week+3+Math.floor(Math.random()*4);
@@ -17952,6 +18164,76 @@ gameNarrative=function(win,margin,score,oscore,context){
   return _v147GameNarrative(win,margin,score,oscore,context);
 };
 
+/* ===================== v1.4.13 HARD-CODED RATING LOCK ===================== */
+// Keep program ratings distinct from the legacy placeholder `strength: 60` values.
+// Baseline schools use Program DNA/current-state evidence; explicitly calibrated schools
+// keep their deliberate ratings. Ratings retain one decimal place for display.
+const V149_ORIGINAL_EXPLICIT_RATINGS={"leroy":86,"southern-choctaw":74,"brantley":74,"elba":75,"francis-marion":53,"j-f-shields":53,"linden":66,"r-c-hatch":18,"maplesville":78,"berry-fayette":72,"addison":76,"meek":70,"clarke-county":69,"luverne":87,"thomasville":88,"reeltown":78,"carbon-hill":53,"gordo":83,"piedmont":81,"fyffe":89,"jackson":80,"t-r-miller":86,"w-s-neal":71,"bullock-county":70,"handley":82,"winfield":78,"asbury":8,"geraldine":75,"vigor":76,"andalusia":72,"charles-henderson":64,"tallassee":66,"deshler":68,"guntersville":80,"saraland":94,"spanish-fort":70,"theodore":74,"pike-road":80,"hillcrest-tuscaloosa":68,"homewood":68,"cullman":55,"clay-chalkville":90,"oxford":64,"pell-city":69,"hartselle":78,"muscle-shoals":79,"russellville":69,"fort-payne":68,"daphne":63,"fairhope":78,"foley":82,"robertsdale":57,"auburn":80,"central-phenix-city":94,"opelika":64,"hewitt-trussville":72,"hoover":91,"thompson":86,"tuscaloosa-county":53,"st-pauls":69,"snook-christian":45};
+const HARD_CODED_BASE_RATINGS={"choctaw-county":58.1,"fruitdale":36.6,"leroy":86,"marengo":54.9,"mcintosh":55.6,"millry":58.1,"southern-choctaw":74,"washington-county":58.1,"abbeville":58.1,"barbour-county":24.8,"brantley":74,"elba":75,"florala":58.1,"kinston":58.1,"pleasant-home":58.1,"samson":58.1,"breakthrough-charter":29.1,"francis-marion":53,"j-f-shields":53,"keith":58.1,"linden":66,"r-c-hatch":18,"sweet-water":68,"university-charter-school":58.1,"billingsley":58.1,"calhoun":25.6,"central-hayneville":58.1,"georgiana":55.4,"maplesville":78,"mckenzie":58.1,"red-level":58.1,"verbena":58.1,"berry-fayette":72,"brilliant":58.1,"hubbertville":58.1,"lynn":58.1,"marion-county":58.1,"pickens-county":58.1,"south-lamar":58.1,"sulligent":58.1,"alabama-aerospace":58.1,"fayetteville":56.5,"lafayette":58.1,"loachapoka":58.1,"notasulga":58.1,"wadley":55.7,"winterboro":56.8,"woodland":56.7,"addison":76,"belgreen":58.1,"cherokee":37.8,"hackleburg":58.1,"meek":70,"phillips-bear-creek":58.1,"red-bay":58.1,"waterloo":55.6,"appalachian":58.1,"cedar-bluff":58.1,"gaylesville":58.1,"ragland":55.4,"spring-garden":58.1,"valley-head":58.1,"woodville":58.1,"chickasaw":61.1,"clarke-county":69,"hillcrest-evergreen":61.1,"j-u-blacksher":61.1,"luverne":87,"monroe-county":33.8,"thomasville":88,"ariton":61.1,"cottonwood":61.1,"g-w-long":61.1,"geneva-county":61.1,"goshen":61.1,"highland-home":61.1,"houston-county":61.1,"zion-chapel":61.1,"aliceville":61.1,"dallas-county":61.1,"greene-county":61.1,"greensboro":61.1,"isabella":61.1,"southside-selma":61.1,"sumter-central":35.2,"thorsby":61.1,"b-b-comer":61.1,"central-coosa":61.1,"dadeville":61.1,"horseshoe-bend":61.1,"lanett":61.1,"ranburne":61.1,"randolph-county":61.1,"reeltown":78,"carbon-hill":53,"cleveland":61.1,"cold-springs":61.1,"gordo":83,"lamar-county":61.1,"locust-fork":61.1,"midfield":61.1,"southeastern":61.1,"gaston":61.1,"ohatchee":61.1,"piedmont":81,"pleasant-valley":61.1,"saks":61.1,"vincent":61.1,"walter-wellborn":61.1,"west-end-walnut-grove":61.1,"colbert-county":61.1,"falkville":61.1,"j-b-pennington":61.1,"lexington":61.1,"phil-campbell":61.1,"sheffield":61.1,"tanner":61.1,"winston-county":61.1,"brindlee-mountain":35.7,"collinsville":61.1,"fyffe":89,"ider":61.1,"north-sand-mountain":61.1,"pisgah":61.1,"sand-rock":61.1,"section":61.1,"escambia-county":64.1,"excel":64.1,"flomaton":64.1,"jackson":80,"opp":64.1,"t-r-miller":86,"w-s-neal":71,"wilcox-central":39.3,"b-t-washington":64.1,"beulah":64.1,"bullock-county":70,"daleville":41,"geneva":64.1,"pike-county":64.1,"slocomb":64.1,"wicksburg":64.1,"bibb-county":64.1,"cordova":64.1,"corner":64.1,"fultondale":64.1,"hale-county":64.1,"pleasant-grove":64.1,"tarrant":39.4,"west-blocton":64.1,"ashville":64.1,"childersburg":64.1,"cleburne-county":64.1,"handley":82,"munford":64.1,"talladega":39.8,"weaver":64.1,"white-plains":64.1,"curry":64.1,"danville":64.1,"east-lawrence":64.1,"fayette-county":64.1,"haleyville":64.1,"hatton":64.1,"oakman":64.1,"winfield":78,"etowah":64.1,"glencoe":64.1,"hanceville":43.3,"hokes-bluff":64.1,"holly-pond":64.1,"oneonta":64.1,"susan-moore":64.1,"vinemont":64.1,"central-florence":64.1,"clements":64.1,"colbert-heights":64.1,"elkmont":41,"lauderdale-county":64.1,"rogers":64.1,"west-limestone":64.1,"wilson":41,"asbury":8,"d-a-r":43.3,"geraldine":75,"madison-county":64.1,"new-hope":64.1,"north-jackson":64.1,"plainview":64.1,"sylvania":64.1,"b-c-rain":67.1,"citronelle":67.1,"leflore":67.1,"orange-beach":67.1,"satsuma":67.1,"vigor":76,"williamson":67.1,"andalusia":72,"ashford":67.1,"carroll":67.1,"dale-county":67.1,"eufaula":67.1,"headland":67.1,"new-brockton":67.1,"straughn":67.1,"demopolis":67.7,"holt":47.1,"jemison":67.1,"montevallo":67.1,"northside":67.1,"selma":67.1,"shelby-county":67.1,"sipsey-valley":67.1,"beauregard":67.1,"charles-henderson":64,"elmore-county":67.1,"greenville":67.7,"holtville":67.1,"marbury":67.1,"tallassee":66,"valley":67.1,"carver-birmingham":67.1,"center-point":67.1,"dora":67.1,"fairfield":67.1,"oak-grove":67.1,"shades-valley":67.1,"wenonah":67.1,"woodlawn":67.1,"alexandria":67.6,"anniston":67.5,"central-clay-county":67.1,"jacksonville":67.1,"leeds":67.1,"lincoln":67.1,"moody":68.4,"sylacauga":67.1,"ardmore":67.1,"brooks":67.1,"deshler":68,"hamilton":67.1,"lawrence-county":67.1,"priceville":67.7,"west-morgan":67.1,"west-point":67.1,"brewer":67.1,"cherokee-county":67.5,"crossville":42.3,"fairview":67.1,"good-hope":67.7,"guntersville":80,"hayden":67.1,"sardis":47.5,"scottsboro":67.1,"baldwin-county":70.1,"blount":70.1,"elberta":70.1,"gulf-shores":70.1,"murphy":50.6,"saraland":94,"spanish-fort":70,"theodore":74,"benjamin-russell":70.1,"park-crossing":70.1,"percy-julian":70.1,"pike-road":80,"rehobeth":70.1,"russell-county":72.5,"stanhope-elmore":70.1,"wetumpka":70.1,"bessemer-city":70.1,"brookwood":70.1,"central-tuscaloosa":70.1,"hillcrest-tuscaloosa":68,"hueytown":70.1,"mcadory":70.1,"northridge":70.1,"paul-bryant":70.1,"calera":72.3,"chelsea":70.1,"chilton-county":49.9,"helena":70.1,"homewood":68,"mountain-brook":73.1,"pelham":70.1,"ramsay":70.1,"cullman":55,"gardendale":70.1,"huffman":70.1,"jackson-olin":70.1,"jasper":70.1,"minor":70.1,"mortimer-jordan":70.1,"parker":70.1,"clay-chalkville":90,"oxford":64,"pell-city":69,"pinson-valley":70.1,"southside-gadsden":70.1,"springville":70.1,"st-clair-county":70.1,"athens":73.2,"austin":72.8,"decatur":70.1,"east-limestone":70.1,"florence":70.1,"hartselle":78,"muscle-shoals":79,"russellville":69,"albertville":45.2,"arab":70.1,"boaz":70.1,"columbia":42.3,"douglas":70.1,"fort-payne":68,"lee-huntsville":70.1,"mae-jemison":70.1,"alma-bryant":73.1,"baker":77.6,"daphne":63,"davidson":73.1,"fairhope":78,"foley":82,"mary-montgomery":76.9,"robertsdale":57,"auburn":80,"carver-montgomery":76.6,"central-phenix-city":94,"dothan-high":77.6,"enterprise":77.6,"j-a-g":76.5,"opelika":64,"smiths-station":73.1,"hewitt-trussville":72,"hoover":91,"oak-mountain":76.8,"prattville":77.1,"spain-park":73.1,"thompson":86,"tuscaloosa-county":53,"vestavia-hills":77.6,"bob-jones":77.5,"buckhorn":73.1,"gadsden-city":73.1,"grissom":73.1,"hazel-green":76.5,"huntsville":77.1,"james-clemens":77.7,"sparkman":77.7,"bayshore-christian":60.1,"bayside-academy":60.1,"cottage-hill-christian":60.1,"mobile-christian":60.1,"northside-methodist-academy":60.1,"providence-christian":60.1,"st-lukes":60.1,"alabama-christian":60.1,"fort-dale-academy":60.1,"montgomery-academy":60.1,"pike-liberal-arts":60.1,"prattville-christian":60.1,"st-james":60.1,"trinity":60.1,"donoho":60.1,"ellwood-christian":31.9,"holy-spirit":60.1,"hope-christian-academy":60.1,"pickens-academy":60.1,"tuscaloosa-academy":60.1,"victory-christian":60.1,"coosa-christian":60.1,"decatur-heritage-christian":60.1,"lindsay-lane-christian":60.1,"mars-hill":60.1,"shoals-christian":60.1,"westbrook-christian":60.1,"whitesburg-christian":60.1,"catholic-montgomery":65.1,"faith-academy":65.1,"glenwood-school":65.1,"houston-academy":65.1,"mcgill-toolen":65.1,"st-michael":65.1,"st-pauls":69,"ums-wright":65.1,"american-christian":65.1,"briarwood":65.1,"john-carroll":65.1,"lee-scott-academy":65.1,"madison-academy":65.1,"randolph":65.1,"st-john-paul-ii":65.1,"westminster-christian":65.1,"snook-christian":45};
+function hardRating(s){
+  if(!s) return 0;
+  const v=HARD_CODED_BASE_RATINGS[s.id];
+  return Number.isFinite(Number(v)) ? Number(v) : Number(s.strength||60);
+}
+
+function rawProgramRating_v149(s){
+  if(!s) return 0;
+  if(Object.prototype.hasOwnProperty.call(HARD_CODED_BASE_RATINGS,s.id)) return HARD_CODED_BASE_RATINGS[s.id];
+  return clamp100(ratingEvidence(s));
+}
+function preseasonProgramRating_v149(s){
+  return rawProgramRating_v149(s);
+}
+preseasonProgramRating=preseasonProgramRating_v149;
+function refreshSchoolStrength_v149(s, seasonRecord){
+  if(!s) return 0;
+  const base=preseasonProgramRating_v149(s);
+  const rec=seasonRecord||{w:0,l:0};
+  const played=(rec.w||0)+(rec.l||0);
+  const seasonPct=played?((rec.w||0)/played)*100:null;
+  let evidence=seasonPct==null?base:(base*0.72+seasonPct*0.28);
+  if(s.id==='asbury') evidence=Math.min(evidence,8);
+  if(s.id==='r-c-hatch') evidence=Math.min(18,Math.max(10,evidence));
+  // Store the calculated value so the rest of the engine sees the same rating,
+  // but never collapse it to an integer.
+  s.strength=Math.round(clamp100(evidence)*10)/10;
+  return s.strength;
+}
+refreshSchoolStrength=refreshSchoolStrength_v149;
+// Re-render the chooser with the same decimal precision used by the engine.
+// v1.4.13: DEFINITIVE HARD-CODED SCHOOL RATINGS.
+// The chooser reads the hard-coded value directly. It does NOT call any
+// recalculation function, and it does NOT round the rating.
+choose=function(){
+ const q=(document.getElementById('schoolSearch')?.value||'').trim().toLowerCase();
+ const cls=document.getElementById('classFilter')?.value||'ALL';
+ const list=DATA.schools.filter(s=>(cls==='ALL'||s.classification===cls)&&(!q||s.name.toLowerCase().includes(q)))
+   .sort((a,b)=>a.classification.localeCompare(b.classification)||a.region-b.region||a.name.localeCompare(b.name));
+ render(`<div class="panel"><div class="row"><div><h2>Choose Your School</h2><span class="muted">2026 football database • ${DATA.schools.length} participating schools</span></div><button class="secondary" onclick="home()">Back</button></div>
+ <div class="grid" style="margin-top:14px"><input id="schoolSearch" placeholder="Search school..." value="${q.replace(/"/g,'&quot;')}" style="padding:12px;border-radius:8px;border:1px solid #3a4654;background:#11161d;color:#eef2f7;font-size:16px"><select id="classFilter" style="padding:12px;border-radius:8px;border:1px solid #3a4654;background:#11161d;color:#eef2f7;font-size:16px"><option value="ALL">All classifications</option>${['1A','2A','3A','4A','5A','6A','Single-A','Double-A'].map(c=>`<option value="${c}" ${cls===c?'selected':''}>${c}</option>`).join('')}</select></div></div>
+ <div id="schoolList" class="grid">${list.map(s=>`<div class="card school-card" data-school-name="${s.name.toLowerCase().replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" data-class="${s.classification}"><h3>${s.name}</h3><span class="tag">${s.classification}</span><span class="tag">Region ${s.region}</span>${s.enrollment?`<span class="tag">${displayRating(s.enrollment)} students</span>`:''}<p>Overall: ${displayRating(hardRating(s)).toFixed(1)}/100 • 2025: ${s.record2025||'—'} • Historical power: ${Number(s.program_dna?.historical_power??s.strength??0).toFixed(1)}/100 • Recent performance: ${recentCalibration(s)!=null?Number(recentCalibration(s)).toFixed(1)+'%':'—'}</p><p class="muted">Hard-coded preseason rating • ${(s.region_opponents||[]).length} region opponents in database</p><button onclick="setupCoach('${s.id}')">Coach Here</button></div>`).join('')}</div>`);
+ const searchInput=document.getElementById('schoolSearch');
+ const classSelect=document.getElementById('classFilter');
+ const cards=Array.from(document.querySelectorAll('.school-card'));
+ const filterCards=()=>{
+   const text=searchInput.value.trim().toLowerCase();
+   const selected=classSelect.value;
+   cards.forEach(card=>{
+     const matchName=!text||card.dataset.schoolName.includes(text);
+     const matchClass=selected==='ALL'||card.dataset.class===selected;
+     card.style.display=(matchName&&matchClass)?'':'none';
+   });
+ };
+ searchInput.addEventListener('input',filterCards);
+ classSelect.addEventListener('change',filterCards);
+}
+
+// v1.4.13 HARD-CODED RATING LOCK: every one of the 394 playable schools has a
+// decimal-capable preseason rating. This prevents legacy strength:60 placeholders
+// from ever reaching the school chooser or engine. Season performance can still
+// modify the live rating through refreshSchoolStrength_v149.
+DATA.schools.forEach(s=>{ s.strength=hardRating(s); });
+
 // v1.4.8 launch fix: the previous package defined home() but never invoked it.
 // Start the game only after every function/patch above has been defined.
 try { home(); } catch (err) {
@@ -17959,6 +18241,183 @@ try { home(); } catch (err) {
   if (app) app.innerHTML = `<div class="panel"><h2>Game startup error</h2><p class="warn">The game could not finish loading.</p><p class="muted">${String(err && err.message ? err.message : err)}</p><button onclick="location.reload()">Reload Game</button></div>`;
   console.error(err);
 }
+
+/* v1.4.24 CONSOLIDATION: richer transfer stories, toxic superstar QB, position development and college interest. */
+(function(){
+  const _oldTransferCandidate = transferCandidate;
+  const _oldLockerCard = lockerCard;
+  const _oldCultureEvent = cultureEvent;
+  const _oldPractice = practice;
+  const _oldStartNextSeason = startNextSeason;
+  const _oldAdvance = advance;
+
+  function transferReasonPack(){
+    const r=Math.random();
+    if(r<0.22)return {key:'family_move',title:'Family Relocation',story:'His family recently moved into your school zone because of a job relocation. He did not leave his old program because of football — he had to change schools.',talent:'elite',risk:'low'};
+    if(r<0.38)return {key:'locker_room',title:'Locker-Room Problems',story:'His previous program reports repeated locker-room conflicts. The talent is real, but the transition comes with baggage.',talent:'high',risk:'high'};
+    if(r<0.52)return {key:'academic',title:'Academic Fresh Start',story:'He transferred after academic and eligibility problems at his previous school. He wants a clean start, but the classroom comes first.',talent:'high',risk:'medium'};
+    if(r<0.65)return {key:'coach_conflict',title:'Previous Coach Conflict',story:'He and his former coaching staff stopped seeing eye to eye. He believes he was not being developed properly.',talent:'high',risk:'medium'};
+    if(r<0.77)return {key:'playing_time',title:'Playing-Time Dispute',story:'He left after losing a quarterback competition at his former school. He wants another chance to prove he can start.',talent:'medium',risk:'medium'};
+    if(r<0.88)return {key:'program_collapse',title:'Program Trouble',story:'His former program has fallen into turmoil after staff turnover and a rough season. He is looking for stability.',talent:'high',risk:'low'};
+    return {key:'position_change',title:'Athlete Looking for a Role',story:'He arrives listed as a quarterback, but your staff immediately notices unusual speed, size and athletic ability that could translate to another position.',talent:'medium',risk:'low'};
+  }
+
+  transferCandidate=function(){
+    const reason=transferReasonPack();
+    let ability=60+Math.floor(Math.random()*17), potential=72+Math.floor(Math.random()*20), exp=58+Math.floor(Math.random()*30);
+    if(reason.talent==='elite'){ability=88+Math.floor(Math.random()*9);potential=96+Math.floor(Math.random()*4);exp=72+Math.floor(Math.random()*20);}
+    if(reason.key==='academic'){ability=72+Math.floor(Math.random()*13);potential=82+Math.floor(Math.random()*16);}
+    if(reason.key==='position_change'){ability=65+Math.floor(Math.random()*11);potential=78+Math.floor(Math.random()*18);}
+    if(reason.key==='locker_room'){ability=78+Math.floor(Math.random()*16);potential=86+Math.floor(Math.random()*13);}
+    const p={name:uniqueName(),grade:10+Math.floor(Math.random()*2),pos:'QB',ability,potential,exp,starter:false,injury:null,morale:68,transfer:true,transferOriginClass:'6A',personality:reason.key==='locker_room'?'volatile':reason.key==='academic'?'driven':reason.key==='family_move'?'steady':['competitive','confident','fiery'][Math.floor(Math.random()*3)],transferReason:reason.key,transferReasonTitle:reason.title,transferStory:reason.story,transferRisk:reason.risk,altPosition:null,positionPlan:null,eligibility:reason.key==='academic'?'Eligibility pending':'Eligible',collegeInterest:[],recruitingNarrative:reason.key==='family_move'?'Family relocation made the transfer possible.':''};
+    if(reason.key==='position_change') p.altPosition=Math.random()<0.55?'WR':'RB';
+    if(reason.key==='family_move') p.transferFamilyMove=true;
+    if(reason.key==='academic') p.academicRisk=1;
+    if(reason.key==='locker_room') p.cultureRisk=1;
+    initPlayerStats(p); return p;
+  };
+
+  function transferPositionFit(p,pos){
+    if(!p)return 0;
+    const athletic=(p.speed||70)+(p.athleticism||70);
+    const bonus=pos==='WR'?((p.speed||70)*0.12+(p.potential||70)*0.05):((p.athleticism||70)*0.12+(p.potential||70)*0.05);
+    return Math.round(clamp((p.ability*.45)+(p.potential*.25)+bonus+Math.random()*8,35,96));
+  }
+  function moveTransferPosition(p,pos){
+    p.pos=pos;p.starter=false;p.altPosition=pos;p.positionPlan={from:'QB',to:pos,weeks:0};
+    const fit=transferPositionFit(p,pos); p.ability=Math.max(p.ability,Math.min(p.potential,fit));
+    p.potential=Math.min(99,p.potential+3);p.morale=clamp((p.morale||70)+2,0,100);
+    return fit;
+  }
+
+  resolveTransferQB=function(choice){
+    const t=state.pendingTransferQB,z=state.players.find(p=>p.pos==='QB'); if(!t)return dashboard();
+    state.pendingTransferQB=null;state.pendingLockerEvent=null;
+    let outcome='Positive',result='',next='';
+    const reason=t.transferReasonTitle||'Transfer';
+    if(choice==='zionMove' && z){
+      const newPos=Math.random()<0.55?'WR':'RB';z.pos=newPos;z.starter=false;t.starter=true;
+      result=`You asked ${z.name} to move from quarterback to ${newPos}. ${t.name} gets the QB job.`;
+      next=`${z.name} can embrace the new role or resent losing the position. His development at ${newPos} will now matter.`;
+      z.morale-=8;t.morale+=5;state.teamCulture.chemistry-=2;
+    } else if(choice==='transferMove'){
+      const newPos=t.altPosition||((t.potential>=88&&Math.random()<0.6)?'WR':'RB');
+      const fit=moveTransferPosition(t,newPos);
+      result=`You decided ${t.name} is not your best QB option and moved him to ${newPos}. His early fit is about ${fit} overall, with room to grow.`;
+      next=`If he embraces the move, his athletic traits could make him much better at ${newPos} than he ever was at quarterback.`;
+      t.morale-=3;state.teamCulture.trust+=2;
+    } else if(choice==='battle'){
+      const winner=Math.random()<clamp(.50+(t.exp-(z?.exp||55))*.003+(t.ability-(z?.ability||55))*.01,.25,.75)?t:z;
+      winner.starter=true;if(winner===t&&z)z.starter=false;
+      result=`The QB battle was intense. ${winner.name} won the job after competing through practice.`;
+      next=winner===t?`${z?.name||'The returning quarterback'} now has to decide whether to accept the challenge or look elsewhere.`:`${t.name} was told he must earn another opportunity while ${z?.name||'the returning quarterback'} keeps QB1.`;
+      if(z)z.morale-=4;t.morale+=winner===t?5:-4;state.teamCulture.chemistry=Math.max(0,state.teamCulture.chemistry-1);
+    } else if(choice==='zion'){
+      if(z)z.starter=true;t.starter=false;t.morale-=5;
+      result=`You kept ${z?.name||'the returning quarterback'} as QB1 and told ${t.name} that 6A experience does not guarantee a starting job here.`;
+      next=`${t.name} can respond by working harder, accepting the role, asking for a position change, or eventually deciding he wants to leave.`;
+    } else {
+      t.starter=false;t.eligibility='Eligibility pending';
+      const leave=Math.random()<0.28;
+      if(leave){outcome='Negative';t.morale-=18;t.transferExit=true;result=`You held ${t.name} out while eligibility is reviewed. He believes you are using eligibility as an excuse and is considering leaving.`;next=`He may transfer again and publicly criticize how the program handled his arrival.`;}
+      else{t.morale+=3;result=`You held ${t.name} out while eligibility is reviewed. He accepts the decision and begins learning the system.`;next=`He spends the year learning the offense and could enter next season prepared to take the job.`;}
+    }
+    if(t.transferReason==='family_move' && t.ability>=88 && choice==='zion') next+=` His family moved here, so losing a player of this caliber could become one of the biggest missed opportunities in your tenure.`;
+    if(t.transferReason==='position_change' && choice==='transferMove') next+=` The staff believes ${t.name} could eventually attract college interest at ${t.pos}.`;
+    if(t.transferReason==='academic') next+=' His academic standing will remain part of his eligibility profile.';
+    if(t.transferReason==='locker_room') next+=' His reputation means the locker room will be watching how you handle him.';
+    if(t.transferExit){state.log.unshift(`${t.name} left after the eligibility dispute.`);} else if(!state.players.includes(t)) state.players.push(t);
+    ensureCulture();state.teamCulture.morale=clamp(state.teamCulture.morale+(outcome==='Negative'?-4:2),0,100);state.teamCulture.chemistry=clamp(state.teamCulture.chemistry,0,100);
+    state.log.unshift(`Transfer QB decision: ${reason} / ${choice}. ${result}`);
+    render(`<div class="panel"><div class="muted">DECISION OUTCOME</div><h2>QB Transfer — ${outcome}</h2><div class="card"><h3>Why He Transferred</h3><p><b>${reason}</b></p><p>${t.transferStory||'The transfer is seeking a new football opportunity.'}</p></div><div class="card"><h3>Outcome</h3><p>${result}</p></div><div class="card"><h3>Consequences</h3><p><b>Team Morale:</b> ${Math.round(state.teamCulture.morale)}/100 • <b>Chemistry:</b> ${Math.round(state.teamCulture.chemistry)}/100</p></div><div class="card"><h3>What Happens Next</h3><p>${next}</p></div><button onclick="practice()">Continue</button></div>`);
+  };
+
+  showTransferQB=function(){
+    const t=state.pendingTransferQB,z=state.players.find(p=>p.pos==='QB'); if(!t)return dashboard();
+    const zion=z||{name:'your returning QB',grade:11,ability:55,exp:55,morale:70};
+    const risk=t.transferRisk==='high'?'High':t.transferRisk==='medium'?'Medium':'Low';
+    render(`<div class="panel"><div class="muted">PRESEASON TRANSFER / QB ROOM</div><h2>${state.school.name} has a quarterback decision.</h2><div class="card"><h3>Why did he transfer?</h3><p><b>${t.transferReasonTitle||'Transfer'}</b></p><p>${t.transferStory||''}</p><p><b>Locker-room risk:</b> ${risk}</p></div><div class="card"><p><b>${zion.name}</b> is returning at quarterback.</p><p><b>${t.name}</b> arrives from a <b>6A program</b>.</p><p>QB • Grade ${t.grade} • Ability ${t.ability} • Potential ${t.potential} • Experience ${t.exp}</p><p>Eligibility: <b>${t.eligibility||'Eligible'}</b></p></div><div class="grid"><button class="choice" onclick="resolveTransferQB('zionMove')">Ask ${zion.name} to move positions</button><button class="choice" onclick="resolveTransferQB('transferMove')">Move the transfer to WR/RB</button><button class="choice" onclick="resolveTransferQB('battle')">Hold a true QB battle</button><button class="choice" onclick="resolveTransferQB('zion')">Stick with ${zion.name}; make the transfer earn it</button><button class="choice" onclick="resolveTransferQB('sit')">Hold the transfer out while eligibility is reviewed</button></div></div>`);
+  };
+
+  // Only generate the special QB transfer at the season boundary or before Week 1.
+  cultureEvent=function(){
+    ensureCulture();
+    if(state.pendingDiscovery||state.pendingTransferQB)return null;
+    if(state.week===1 && !state.transferQBHandled && Math.random()<0.12){
+      state.pendingTransferQB=transferCandidate();state.transferQBHandled=true;state.pendingLockerEvent={type:'transferQB'};state.situationCooldownUntil=state.week+4+Math.floor(Math.random()*3);return {type:'transferQB'};
+    }
+    // Prevent the legacy v1.4.2 transfer generator from creating midseason transfers.
+    const oldHandled=state.transferQBHandled;
+    if(state.week!==1)state.transferQBHandled=true;
+    const ev=_oldCultureEvent();
+    state.transferQBHandled=oldHandled || state.transferQBHandled;
+    return ev;
+  };
+
+  lockerCard=function(){
+    const e=state.pendingLockerEvent;
+    if(e?.type==='toxicQB')return `<div class="card warn"><h3>☣️ Toxic Superstar QB</h3><p><b>${e.p.name}</b> is one of the most talented players on your roster — and your locker room is miserable around him.</p><p>Teammates say he blames receivers, berates linemen and treats every mistake like somebody else's fault. You are starting to hate coaching him.</p><p><b>${e.p.pos} • Grade ${e.p.grade} • Ability ${e.p.ability} • Potential ${e.p.potential}</b></p><button class="choice" onclick="resolveToxicQB('keep')">Keep him as QB1 and live with it</button><button class="choice" onclick="resolveToxicQB('confront')">Confront him and demand a change</button><button class="choice" onclick="resolveToxicQB('bench')">Bench him and put culture first</button></div>`;
+    return _oldLockerCard();
+  };
+
+  resolveToxicQB=function(choice){
+    const e=state.pendingLockerEvent,p=e?.p;if(!p)return practice();
+    let outcome='Mixed',result='',next='';
+    if(choice==='keep'){
+      state.teamCulture.morale=clamp(state.teamCulture.morale-8,0,100);state.teamCulture.chemistry=clamp(state.teamCulture.chemistry-9,0,100);state.teamCulture.trust=clamp(state.teamCulture.trust-5,0,100);p.morale=clamp((p.morale||70)+3,0,100);result=`You kept ${p.name} at QB. The team knows you're prioritizing an elite talent, but the locker room takes another hit.`;next=`If the behavior continues, teammates may stop having fun, younger players may disengage, and you may eventually have to choose between the superstar and the culture.`;
+    } else if(choice==='confront'){
+      const success=Math.random()<0.52;
+      if(success){outcome='Positive';state.teamCulture.morale=clamp(state.teamCulture.morale+8,0,100);state.teamCulture.chemistry=clamp(state.teamCulture.chemistry+7,0,100);state.teamCulture.trust=clamp(state.teamCulture.trust+5,0,100);p.morale=clamp((p.morale||70)+5,0,100);result=`You confronted ${p.name}. To your surprise, he listened. He starts treating teammates like teammates instead of employees.`;next=`The talent remains elite, but now the team can actually enjoy playing with him.`;}else{outcome='Negative';state.teamCulture.morale=clamp(state.teamCulture.morale-4,0,100);state.teamCulture.trust=clamp(state.teamCulture.trust-7,0,100);p.morale=clamp((p.morale||70)-12,0,100);result=`${p.name} took the confrontation personally. He is still your best quarterback, but now the conflict is between the star player and his head coach.`;next=`He may demand a transfer, stop buying into the program, or force you to decide whether his talent is worth the cost.`;}
+    } else {
+      p.starter=false;const backup=state.players.find(x=>x!==p&&x.pos==='QB'&&!x.injury);if(backup)backup.starter=true;state.teamCulture.morale=clamp(state.teamCulture.morale+10,0,100);state.teamCulture.chemistry=clamp(state.teamCulture.chemistry+9,0,100);state.teamCulture.trust=clamp(state.teamCulture.trust+6,0,100);p.morale=clamp((p.morale||70)-14,0,100);outcome='Positive';result=`You benched ${p.name}. The football team immediately feels lighter and more connected.`;next=backup?`${backup.name} takes the reps at QB. The offense may lose some talent, but the new environment gives everyone a chance to breathe.`:`You do not have a ready-made replacement. The team culture improves, but now you have a quarterback problem.`;
+    }
+    state.pendingLockerEvent=null;state.log.unshift(`Toxic superstar QB decision: ${choice}. ${result}`);
+    render(`<div class="panel"><div class="muted">DECISION OUTCOME</div><h2>Toxic Superstar QB — ${outcome}</h2><div class="card"><h3>Outcome</h3><p>${result}</p></div><div class="card"><h3>Consequences</h3><p><b>Morale:</b> ${Math.round(state.teamCulture.morale)}/100 • <b>Chemistry:</b> ${Math.round(state.teamCulture.chemistry)}/100 • <b>Coach Trust:</b> ${Math.round(state.teamCulture.trust)}/100</p></div><div class="card"><h3>What Happens Next</h3><p>${next}</p></div><button onclick="practice()">Continue</button></div>`);
+  };
+
+  // Rare toxic-superstar event. It only appears when an elite QB exists and the locker room is already showing strain.
+  cultureEvent=function(){
+    const ev=_oldCultureEvent();
+    if(ev)return ev;
+    if(state.week>=1 && !state.pendingLockerEvent){
+      const qbs=state.players.filter(p=>p.pos==='QB'&&!p.injury&&p.ability>=84);
+      if(qbs.length && (state.teamCulture?.morale||70)<68 && Math.random()<0.10){
+        const p=qbs[Math.floor(Math.random()*qbs.length)];state.pendingLockerEvent={type:'toxicQB',p};state.situationCooldownUntil=state.week+4+Math.floor(Math.random()*3);return state.pendingLockerEvent;
+      }
+    }
+    return null;
+  };
+
+  // Development for players moved out of QB, plus fictional college-interest outcomes.
+  function updateCollegeInterest(){
+    if(!state.players)return;
+    state.players.forEach(p=>{
+      p.collegeInterest=p.collegeInterest||[];
+      if(p.grade>=12 && !p.collegeInterest.includes('Alabama State') && p.ability>=78 && Math.random()<0.18){
+        p.collegeInterest.push('Alabama State');
+        state.log.unshift(`College interest: Alabama State has contacted ${p.name}, a ${p.pos}.`);
+      }
+      if(p.positionPlan){
+        p.positionPlan.weeks=(p.positionPlan.weeks||0)+1;
+        const gain=p.positionPlan.weeks<=3?1:Math.random()<0.45?1:0;
+        if(gain && p.ability<p.potential)p.ability=Math.min(p.potential,p.ability+gain);
+        if(p.positionPlan.weeks===4){state.log.unshift(`${p.name} is starting to look natural at ${p.pos} after the position change.`);}
+      }
+    });
+  }
+  advance=function(){
+    const before=state.week;_oldAdvance();
+    if(state.week!==before)updateCollegeInterest();
+  };
+
+  startNextSeason=function(id){
+    _oldStartNextSeason(id);state.transferQBHandled=false;state.pendingTransferQB=null;state.pendingLockerEvent=null;state.pendingDiscovery=null;state.log.unshift('Preseason roster note: transfer decisions are closed once Week 1 begins.');
+  };
+
+  // Ensure a fresh dynasty start has the transfer flags needed by the new system.
+  const _oldStart=start;
+  start=function(id){_oldStart(id);state.transferQBHandled=false;state.pendingTransferQB=null;state.pendingLockerEvent=null;};
+})();
 
 </script>
 </body>
